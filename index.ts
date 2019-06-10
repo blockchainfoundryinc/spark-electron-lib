@@ -14,14 +14,22 @@ export interface ClientConfig {
   zmq_socket_url?: string;
 }
 
-export const IPC_MESSAGE = {
+export const EVENT = {
+  QUIT_APP: 'quitApp'
+};
 
+export const IPC_MESSAGE = {
+  ZMQ_START: 'zmqsocket-start',
+  ZMQ_REINDEX: 'zmqsocket-reindex'
 };
 
 export const IPC_CHANNEL = {
   RELAUNCH_APP: 'relaunch',
-  QUIT_APP: 'quit'
+  QUIT_APP: 'quit',
+  ZMQSOCKET: 'zmqsocket',
+  ZMQSOCKET_ERROR: 'zmqsocket-error'
 };
 
-module.exports.CHANNEL = IPC_CHANNEL;
+module.exports.IPC_CHANNEL = IPC_CHANNEL;
 module.exports.IPC_MESSAGE = IPC_MESSAGE;
+module.exports.EVENT = EVENT;

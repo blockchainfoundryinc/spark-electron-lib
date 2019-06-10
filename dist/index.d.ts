@@ -13,8 +13,16 @@ export interface ClientConfig {
     default_unlock_period: number;
     zmq_socket_url?: string;
 }
-export declare const IPC_MESSAGE: {};
+export declare const EVENT: {
+    QUIT_APP: string;
+};
+export declare const IPC_MESSAGE: {
+    ZMQ_START: string;
+    ZMQ_REINDEX: string;
+};
 export declare const IPC_CHANNEL: {
     RELAUNCH_APP: string;
     QUIT_APP: string;
+    ZMQSOCKET: string;
+    ZMQSOCKET_ERROR: string;
 };
