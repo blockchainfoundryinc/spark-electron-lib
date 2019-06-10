@@ -1,11 +1,11 @@
 export interface ClientConfig {
   host: string;
-  port: string;
+  port: number;
   syscoin_datadir?: string;
   funding_url: string;
   username: string;
   password: string;
-  rpcPort: number;
+  rpcport: number;
   explorer_tx_url: string;
   explorer_address_url: string;
   explorer_asset_url: string;
@@ -13,3 +13,15 @@ export interface ClientConfig {
   default_unlock_period: number;
   zmq_socket_url?: string;
 }
+
+export const IPC_MESSAGE = {
+
+};
+
+export const IPC_CHANNEL = {
+  RELAUNCH_APP: 'relaunch',
+  QUIT_APP: 'quit'
+};
+
+module.exports.CHANNEL = IPC_CHANNEL;
+module.exports.IPC_MESSAGE = IPC_MESSAGE;

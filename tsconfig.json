@@ -10,7 +10,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noStrictGenericChecks": true,
-    "allowJs": true
+    "declaration": true,
+    "allowJs": false
   },
   "exclude": [
     "node_modules",
